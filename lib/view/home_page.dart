@@ -148,14 +148,14 @@ class _HomePageState extends State<HomePage> {
             fit: StackFit.expand,
             children: [
               data
-                  ? WebView(
-                initialUrl:"https://nerdyapegaming.com",
+                  ?WebView(
+                initialUrl:"http://nerdyapegaming.com",
                 //"https://workflowmanagement.excelitaiportfolio.com/super-admin/login/",
                 javascriptMode: JavascriptMode.unrestricted,
                 onWebViewCreated: (WebViewController webViewController) {
                   _controller.complete(webViewController);
                 },
-                onProgress: (int progress) {
+                onProgress: (int progress){
                   print('WebView is loading (progress : $progress%)');
                   streamController.sink.add(progress);
                 },
